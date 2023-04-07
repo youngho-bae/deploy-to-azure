@@ -24,6 +24,8 @@ jobs:
       - name: npm install and build webpack
         run: |
           npm install
+          # '23.4.7 yhbae added a line to fix build error
+          npm audit fix --force
           npm run build
       - uses: actions/upload-artifact@v3
         with:
